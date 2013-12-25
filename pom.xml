@@ -20,12 +20,12 @@
 		<repository>
 			<id>mklinger</id>
 			<name>mklinger-releases-private</name>
-			<url>https://mklinger.de/nexus/content/repositories/releases-private/</url>
+			<url>https://mklinger.de/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>mklinger</id>
 			<name>mklinger-snapshots-private</name>
-			<url>https://mklinger.de/nexus/content/repositories/snapshots-private/</url>
+			<url>https://mklinger.de/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
