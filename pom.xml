@@ -7,6 +7,24 @@
 	<version>1.8-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
+	<inceptionYear>2013</inceptionYear>
+
+	<licenses>
+		<license>
+			<name>Apache License 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Marc Klinger</name>
+			<email>mklinger[at]mklinger[dot]de</email>
+			<organization>mklinger GmbH</organization>
+			<organizationUrl>http://www.mklinger.de</organizationUrl>
+		</developer>
+	</developers>
+
 	<prerequisites>
 		<maven>2.2.1</maven>
 	</prerequisites>
@@ -267,10 +285,10 @@
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
-								<phase>verify</phase>
 								<goals>
 									<goal>sign</goal>
 								</goals>
+								<phase>verify</phase>
 								<configuration>
 									<keyname>2710564F</keyname>
 								</configuration>
@@ -323,7 +341,7 @@
 												</goals>
 											</pluginExecutionFilter>
 											<action>
-												<execute />
+												<execute></execute>
 											</action>
 										</pluginExecution>
 									</pluginExecutions>
