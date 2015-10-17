@@ -12,8 +12,8 @@
 	</prerequisites>
 
 	<scm>
-		<connection>scm:git:git@mklinger.de:maven-parent.git</connection>
-		<developerConnection>scm:git:git@mklinger.de:maven-parent.git</developerConnection>
+		<connection>scm:git:git@github.com:mklinger/maven-parent.git</connection>
+		<developerConnection>scm:git:git@github.com:mklinger/maven-parent.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
