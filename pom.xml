@@ -4,7 +4,7 @@
 
 	<groupId>de.mklinger.maven</groupId>
 	<artifactId>maven-parent</artifactId>
-	<version>1.8-SNAPSHOT</version>
+	<version>1.7.1</version>
 	<packaging>pom</packaging>
 
 	<prerequisites>
@@ -14,7 +14,7 @@
 	<scm>
 		<connection>scm:git:git@github.com:mklinger/maven-parent.git</connection>
 		<developerConnection>scm:git:git@github.com:mklinger/maven-parent.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>maven-parent-1.7.1</tag>
 	</scm>
 
 	<distributionManagement>
@@ -258,7 +258,7 @@
 												</goals>
 											</pluginExecutionFilter>
 											<action>
-												<execute></execute>
+												<execute />
 											</action>
 										</pluginExecution>
 									</pluginExecutions>
