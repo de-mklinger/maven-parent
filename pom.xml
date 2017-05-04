@@ -31,11 +31,13 @@
 			<organization>mklinger GmbH</organization>
 			<organizationUrl>http://www.mklinger.de</organizationUrl>
 		</developer>
+		<developer>
+			<name>Marius Heinzmann</name>
+			<email>mheinzmann[at]mklinger[dot]de</email>
+			<organization>mklinger GmbH</organization>
+			<organizationUrl>http://www.mklinger.de</organizationUrl>
+		</developer>
 	</developers>
-
-	<prerequisites>
-		<maven>2.2.1</maven>
-	</prerequisites>
 
 	<scm>
 		<connection>scm:git:git@github.com:de-mklinger/maven-parent.git</connection>
@@ -56,10 +58,13 @@
 	</distributionManagement>
 
 	<properties>
-		<slf4j.version>1.7.7</slf4j.version>
-		<logback.version>1.1.2</logback.version>
+		<slf4j.version>1.7.25</slf4j.version>
+		<logback.version>1.2.3</logback.version>
+		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
 	</properties>
 
 	<dependencyManagement>
@@ -67,7 +72,7 @@
 			<dependency>
 				<groupId>commons-io</groupId>
 				<artifactId>commons-io</artifactId>
-				<version>2.4</version>
+				<version>2.5</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-lang</groupId>
@@ -108,13 +113,13 @@
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
-				<version>4.11</version>
+				<version>4.12</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.easymock</groupId>
 				<artifactId>easymock</artifactId>
-				<version>3.2</version>
+				<version>3.4</version>
 				<scope>test</scope>
 			</dependency>
 		</dependencies>
@@ -126,32 +131,23 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.1</version>
-					<configuration>
-						<encoding>UTF-8</encoding>
-						<source>1.7</source>
-						<target>1.7</target>
-					</configuration>
+					<version>3.6.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-resources-plugin</artifactId>
-					<version>2.6</version>
-					<configuration>
-						<encoding>UTF-8</encoding>
-					</configuration>
+					<version>3.0.2</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
-					<version>2.4</version>
+					<version>3.0.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>2.10.3</version>
+					<version>2.10.4</version>
 					<configuration>
-						<encoding>UTF-8</encoding>
 						<configuration>
 							<additionalparam>-Xdoclint:none</additionalparam>
 						</configuration>
@@ -160,42 +156,42 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
-					<version>2.8</version>
+					<version>3.0.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-clean-plugin</artifactId>
-					<version>2.5</version>
+					<version>3.0.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-install-plugin</artifactId>
-					<version>2.5.1</version>
+					<version>2.5.2</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-site-plugin</artifactId>
-					<version>3.4</version>
+					<version>3.6</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-deploy-plugin</artifactId>
-					<version>2.8.1</version>
+					<version>2.8.2</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>build-helper-maven-plugin</artifactId>
-					<version>1.9</version>
+					<version>3.0.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-antrun-plugin</artifactId>
-					<version>1.7</version>
+					<version>1.8</version>
 					<dependencies>
 						<dependency>
 							<groupId>org.apache.ant</groupId>
 							<artifactId>ant</artifactId>
-							<version>1.9.3</version>
+							<version>1.9.9</version>
 						</dependency>
 						<dependency>
 							<groupId>ant-contrib</groupId>
@@ -207,7 +203,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-release-plugin</artifactId>
-					<version>2.5</version>
+					<version>2.5.3</version>
 					<configuration>
 						<autoVersionSubmodules>true</autoVersionSubmodules>
 						<preparationGoals>clean install</preparationGoals>
@@ -216,9 +212,8 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.17</version>
+					<version>2.20</version>
 					<configuration>
-						<encoding>UTF-8</encoding>
 						<failIfNoTests>false</failIfNoTests>
 						<redirectTestOutputToFile>true</redirectTestOutputToFile>
 					</configuration>
@@ -226,9 +221,8 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-failsafe-plugin</artifactId>
-					<version>2.17</version>
+					<version>2.20</version>
 					<configuration>
-						<encoding>UTF-8</encoding>
 						<failIfNoTests>false</failIfNoTests>
 						<redirectTestOutputToFile>true</redirectTestOutputToFile>
 					</configuration>
@@ -236,19 +230,35 @@
 				<plugin>
 					<groupId>org.apache.felix</groupId>
 					<artifactId>maven-bundle-plugin</artifactId>
-					<version>2.5.0</version>
+					<version>3.3.0</version>
 					<extensions>true</extensions>
 				</plugin>
 				<plugin>
 					<groupId>com.github.ekryd.sortpom</groupId>
 					<artifactId>sortpom-maven-plugin</artifactId>
-					<version>2.4.0</version>
+					<version>2.8.0</version>
 					<configuration>
 						<predefinedSortOrder>recommended_2008_06</predefinedSortOrder>
 						<encoding>${project.build.sourceEncoding}</encoding>
 						<keepBlankLines>true</keepBlankLines>
 						<sortDependencies>scope</sortDependencies>
+						<sortModules>true</sortModules>
 						<nrOfIndentSpace>-1</nrOfIndentSpace>
+					</configuration>
+				</plugin>
+				<!-- | Use 'mvn license:format -N' at top of project to add missing headers -->
+				<plugin>
+					<groupId>com.mycila</groupId>
+					<artifactId>license-maven-plugin</artifactId>
+					<version>3.0</version>
+					<configuration>
+						<header>header.txt</header>
+						<includes>
+							<include>**/*.java</include>
+						</includes>
+						<mapping>
+							<java>SLASHSTAR_STYLE</java>
+						</mapping>
 					</configuration>
 				</plugin>
 			</plugins>
@@ -305,7 +315,7 @@
 					<plugin>
 						<groupId>org.sonatype.plugins</groupId>
 						<artifactId>nexus-staging-maven-plugin</artifactId>
-						<version>1.6.3</version>
+						<version>1.6.8</version>
 						<extensions>true</extensions>
 						<configuration>
 							<serverId>ossrh</serverId>
@@ -359,7 +369,7 @@
 					<plugin>
 						<groupId>org.zeroturnaround</groupId>
 						<artifactId>jrebel-maven-plugin</artifactId>
-						<version>1.1.5</version>
+						<version>1.1.7</version>
 						<executions>
 							<execution>
 								<id>generate-rebel-xml</id>
