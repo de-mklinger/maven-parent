@@ -73,6 +73,7 @@
 		<mediatype.version>1.0</mediatype.version>
 		<sets.version>1.0</sets.version>
 		<streamcopy.version>1.0</streamcopy.version>
+		<strings.version>1.0</strings.version>
 		<throwables.version>1.0</throwables.version>
 		<uribuilder.version>1.0</uribuilder.version>
 
@@ -189,6 +190,11 @@
 				<groupId>de.mklinger.micro</groupId>
 				<artifactId>streamcopy</artifactId>
 				<version>${streamcopy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.mklinger.micro</groupId>
+				<artifactId>strings</artifactId>
+				<version>${strings.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>de.mklinger.micro</groupId>
