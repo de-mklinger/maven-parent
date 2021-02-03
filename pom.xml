@@ -84,7 +84,7 @@
 		<mockito.version>2.28.2</mockito.version>
 
 		<!-- Plugin dependencies -->
-		<ant.version>1.9.9</ant.version>
+		<ant.version>1.10.9</ant.version>
 		<ant-contrib.version>1.0b3</ant-contrib.version>
 		<build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
 		<license-maven-plugin>3.0</license-maven-plugin>
